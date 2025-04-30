@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+body{
+    @apply bg-black
+}
+
+.navbar{
+    @apply w-screen h-[100px] bg-gradient-to-bl from-black via-purple-700 to-neutral-800 flex justify-center items-center
+}
+.navbar-container{
+    @apply flex justify-center items-center gap-x-50 
+}
+
+
