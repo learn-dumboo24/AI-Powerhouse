@@ -4,7 +4,7 @@ function Navbar(){
         return(window.location.reload());
     }
     function Waves(){
-        return (a+b);
+        return (b+a);
     }
     return(
         <>
