@@ -1,16 +1,22 @@
-import React from "react";
-import { useState } from 'react';
+import React, { useState } from "react";
 import "../src/check.css";
 import Navbar from "./assets/navbar.jsx";
 import Hyperspeed from "./assets/components/Hyperspeed/Hyperspeed.jsx";
+import Middle from "./assets/middle.jsx"
+
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [showMiddle, setShowMiddle] = useState(false);
+
+  const handleGetStarted = () => {
+    setShowMiddle(true);
+  };
 
   return (
     <>
-      <Navbar />
+      <Navbar onGetStarted={handleGetStarted} />
+
   <Hyperspeed
     effectOptions={{
       onSpeedUp: () => { },
@@ -50,6 +56,8 @@ function App() {
       }
     }}
 />
+    {showMiddle && <Middle />}
+    
     </>
   )
 }
